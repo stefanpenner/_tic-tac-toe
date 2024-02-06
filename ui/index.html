@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React App with Modules</title>
+    <!-- No need to include Babel as we won't use JSX directly in HTML -->
+  <style>
+  h1 { text-align: center; }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+    grid-template-rows: repeat(3, 1fr); /* Creates three rows */
+    gap: 5px; /* Space between cells */
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    border: 3px solid black;
+    box-sizing: border-box;
+  }
+    
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none;
+  }
+  .cell:hover {
+    background-color: lightgrey;
+  }
+  .cell.clicked {
+    cursor: not-allowed;
+  }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <!-- Import the main JavaScript module -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
+
